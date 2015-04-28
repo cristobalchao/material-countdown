@@ -1,31 +1,6 @@
 // bower:scss
 // endbower
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-style: normal;
-
-  color: #FFF;
-}
-html {
-  background: transparent url(../images/wallpaper_1600x1000.jpg) no-repeat top center;
-  background-size: cover;
-}
-body {
-  background: transparent;
-}
-
-body {
-  transform: translate3d(0,0,0);
-  overflow: hidden;
-}
-
 $BG_COLOR_1:  #F44336;
 $BG_COLOR_2:  #E91E63;
 $BG_COLOR_3:  #9C27B0;
@@ -47,13 +22,25 @@ $BG_COLOR_18: #9E9E9E;
 $BG_COLOR_19: #607D8B;
 $BG_COLOR_20: #000000;
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-style: normal;
+
+  color: #FFF;
+}
 body {
+  transform: translate3d(0,0,0);
+  overflow: hidden;
   user-select: none;
   background: #1788CE;
   color: white;
   cursor: default;
-  font-family: 'Roboto';
 
   .ink-section {
     .content, h1 {

@@ -9,25 +9,27 @@
  * Main module of the application.
  */
 angular
-  .module('amCountdownApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'ngMaterial',
-    'angularMoment'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .module('amCountdownApp', [
+        'ngAnimate',
+        'ngAria',
+        'ngCookies',
+        'ngMessages',
+        'ngResource',
+        'ngRoute',
+        'ngSanitize',
+        'ngTouch',
+        'ngMaterial',
+        'angularMoment'
+    ])
+    .config(function ($routeProvider) {
+        /*
+         $routeProvider
+             .when('/', {
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl'
+             })
+             .otherwise({
+                redirectTo: '/'
+            });
+         */
+    });

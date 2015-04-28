@@ -20,8 +20,35 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="amCountdownApp">
-    <main layout="column" layout-align="center" ng-view=""></main>
+  <body ng-app="amCountdownApp" ng-controller="CountdownCtrl">
+    <main layout="column" layout-align="center" ng-init="tick()" ng-click="makeWaves($event)">
+        <section class="ink-section">
+            <div id="ink"></div>
+            <div class="content">
+                <div layout="row" layout-align="center">
+                    <h1 ng-bind="getCountdownText()"></h1>
+                </div>
+                <div layout="row" layout-align="center">
+                    <div flex="20" class="content">
+                        <time ng-bind="dhms.day.value"></time>
+                        <label ng-bind="dhms.day.label"></label>
+                    </div>
+                    <div flex="20" class="content">
+                        <time ng-bind="dhms.hr.value"></time>
+                        <label ng-bind="dhms.hr.label"></label>
+                    </div>
+                    <div flex="20" class="content">
+                        <time ng-bind="dhms.min.value"></time>
+                        <label ng-bind="dhms.min.label"></label>
+                    </div>
+                    <div flex="20" class="content">
+                        <time ng-bind="dhms.sec.value"></time>
+                        <label ng-bind="dhms.sec.label"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
@@ -44,6 +71,7 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/constants.js"></script>
     <script src="scripts/controllers.js"></script>
     <!-- endbuild -->
   </body>
